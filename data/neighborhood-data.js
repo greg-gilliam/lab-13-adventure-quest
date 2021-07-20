@@ -5,6 +5,7 @@ const victorian = {
         top: '89%',
         left: '44%',
     },
+    image: 'victorian.png',
     description: 'You have chosen to go to the Victorian neighborhood in town. Which house do you want to go to?',
     choices: [{
         id: 'spooky house',
@@ -34,6 +35,7 @@ const trailers = {
         top: '17%',
         left: '37%',
     },
+    image: 'trailer.jpeg',
     description: 'You have chosen to go to the trailer park in town. Which house do you want to go to?',
     choices: [{
         id: 'spooky house',
@@ -64,6 +66,7 @@ const apartments = {
         top: '31%',
         left: '5%',
     },
+    image: 'apartments.jpeg',
     description: 'You have chosen to go to an apartment in town. Which house do you want to go to?',
     choices: [{
         id: 'spooky house',

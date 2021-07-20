@@ -29,7 +29,7 @@ const victorian = {
 
 const trailers = {
     id: 'trailers',
-    title: 'Fancy Victorian Neighborhood',
+    title: 'trailer park',
     map: {
         top: '17%',
         left: '37%',
@@ -59,7 +59,7 @@ const trailers = {
 
 const apartments = {
     id: 'apartments',
-    title: 'Fancy Victorian Neighborhood',
+    title: 'apartment buildings',
     map: {
         top: '31%',
         left: '5%',

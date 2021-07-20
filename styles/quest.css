@@ -1,4 +1,5 @@
-#user-form {
+#quest-container {
     display: flex;
     flex-direction: column;
+    margin: auto;
 }

@@ -61,8 +61,8 @@ const apartments = {
     id: 'apartments',
     title: 'Fancy Victorian Neighborhood',
     map: {
-        top: '17%',
-        left: '37%',
+        top: '31%',
+        left: '5%',
     },
     description: 'You have chosen to go to an apartment in town. Which house do you want to go to?',
     choices: [{

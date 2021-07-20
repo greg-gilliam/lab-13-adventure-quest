@@ -5,9 +5,11 @@ const userForm = document.getElementById('user-form');
 
 userForm.addEventListener('submit', e => {
     e.preventDefault();
-    const formData = new formData(userForm);
+    const formData = new FormData(userForm);
 
     const newUser = makeUser(formData);
-    SpeechSynthesisUtterance(newUser);
-    // window.location.replace(./map);
+
+    setUser(newUser);
+
+    window.location.replace('./map/index.html');
 });

@@ -9,7 +9,7 @@ const questDescription = document.getElementById('quest-description');
 const choices = document.getElementById('choices');
 
 const quest = findById(neighborhoods, searchParams.get('questId'));
-console.log(quest);
+console.log(neighborhoods, searchParams.get('questId'));
 
 questTitle.textContent = quest.title;
 questImage.src = `../assets/quests/${quest.image}`;

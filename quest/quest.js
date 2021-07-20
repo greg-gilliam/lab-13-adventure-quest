@@ -1,5 +1,6 @@
 import neighborhoods from '../data/neighborhood-data.js';
 import findById from '../data/find-by-id.js';
+import { getUser, setUser } from '../data/storage-utils.js';
 
 const searchParams = new URLSearchParams(window.location.search);
 
@@ -30,3 +31,22 @@ for (let choice of quest.choices){
 
     choices.appendChild(label);
 }
+const questForm = document.getElementById('choice-form');
+questForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const choiceForm = new FormData(questForm);
+
+    const choiceValue = choiceForm.get('choice');
+    const choiceData = findById(quest.choices, choiceValue);
+
+    const user = getUser();
+    user.candy += choiceData.candy;
+    user.health += choiceData.health;
+    user.completed[quest.id] = true;
+    setUser(user);
+
+    const backLink = document.getElementById('back-link');
+    questDescription.textContent = choiceData.result;
+    questForm.classList.add('hidden');
+    backLink.classList.remove('hidden');
+});

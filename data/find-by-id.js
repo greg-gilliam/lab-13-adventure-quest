@@ -4,7 +4,6 @@ function findById(items, id) {
             return item;
         }
     }
-    return null;
 }
 
 export default findById;

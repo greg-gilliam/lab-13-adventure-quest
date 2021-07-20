@@ -1,5 +1,17 @@
-#neighborhood-list{
+#choices {
     display: flex;
     flex-direction: column;
     margin: auto;
+}
+img {
+    height: 40%;
+}
+#quest-container {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15px;
 }

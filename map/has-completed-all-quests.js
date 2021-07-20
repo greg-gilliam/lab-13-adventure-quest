@@ -1,8 +1,8 @@
 import neighborhoods from '../data/neighborhood-data.js';
 
 export function hasCompletedAllQuests(user){
-    for (let quest of quests){
-        if (!user.completed[quest.id]) {
+    for (let neighborhood of neighborhoods){
+        if (!user.completed[neighborhood.id]) {
             return false;
         }
     }

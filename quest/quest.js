@@ -1,5 +1,5 @@
 import neighborhoods from '../data/neighborhood-data.js';
-import { findById } from '../data/storage-utils.js';
+import { findById } from '../data/find-by-id.js';
 
 const searchParams = new URLSearchParams(window.location.search);
 
@@ -18,7 +18,7 @@ for (let choice of quest.choices){
     const label = document.createElement('label');
 
     const radio = document.createElement('input');
-    radio.name = 'coice';
+    radio.name = 'choice';
     radio.type = 'radio';
     radio.value = choice.id;
 

@@ -1,4 +1,4 @@
-import neighborhood from '../data/neighborhood-data.js';
+import neighborhoods from '../data/neighborhood-data.js';
 
 const neighborhoodList = document.getElementById('neighborhood-list');
 

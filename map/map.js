@@ -25,7 +25,7 @@ function createNeighborhoodSpan(neighborhood){
 }
 
 function createNeighborhoodLink(neighborhood){
-    const neighborhoodHref = `../data/?neighborhoodId=${neighborhood.id}`;
+    const neighborhoodHref = `../quest/?neighborhoodId=${neighborhood.id}`;
 
     const neighborhoodLink = document.createElement('a');
 

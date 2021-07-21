@@ -35,15 +35,18 @@ const neighborhoodForm = document.getElementById('choice-form');
 neighborhoodForm.addEventListener('submit', (e)=>{
     e.preventDefault();
     const choiceForm = new FormData(neighborhoodForm);
+    console.log(choiceForm.get('choice'));
 
     const choiceValue = choiceForm.get('choice');
     const choiceData = findById(neighborhood.choices, choiceValue);
+    console.log(choiceData);
 
     const user = getUser();
     user.candy += choiceData.candy;
     user.health += choiceData.health;
     user.completed[neighborhood.id] = true;
     setUser(user);
+    
 
     const backLink = document.getElementById('back-link');
     neighborhoodDescription.textContent = choiceData.result;

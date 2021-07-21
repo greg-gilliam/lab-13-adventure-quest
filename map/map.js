@@ -1,5 +1,5 @@
 import neighborhoods from '../data/neighborhood-data.js';
-import { getUser } from '..data/storage-utils.js';
+import { getUser } from '../data/storage-utils.js';
 import { hasCompletedAllQuests } from './has-completed-all-quests.js';
 
 const user = getUser();
@@ -10,8 +10,8 @@ if (user.health <= 0 || hasCompletedAllQuests(user)){
 
 const neighborhoodList = document.getElementById('neighborhood-list');
 
-for (let neighborhood of neighborhood) {
-    if (user.completed[neighborhood.id]){
+for (let neighborhood of neighborhoods) {
+    if (user.complete[neighborhood.id]){
         createNeighborhoodSpan(neighborhood);
     } else {
         createNeighborhoodLink(neighborhood);
@@ -32,15 +32,5 @@ function createNeighborhoodLink(neighborhood){
     neighborhoodLink.href = neighborhoodHref;
     neighborhoodLink.textContent = neighborhood.title;
 
-    neighborhoodList.appendChild(neighborhoodLink);
-}
-
-for (let neighborhood of neighborhoods) {
-    const neighborhoodHref = `../data/?neighborhoodId=${neighborhood.id}`;
-
-    const neighborhoodLink = document.createElement('a');
-    neighborhoodLink.href = neighborhoodHref;
-    neighborhoodLink.textContent = neighborhood.title;
-    
     neighborhoodList.appendChild(neighborhoodLink);
 }

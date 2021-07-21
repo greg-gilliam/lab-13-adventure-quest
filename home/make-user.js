@@ -3,8 +3,8 @@ export function makeUser(formData){
         candy: 0,
         health: 35,
         name: formData.get('name'),
-        costume: formData.get('csotume'),
-        complete: {}
+        costume: formData.get('costume'),
+        complete: []
     };
 
     const key = 'candy';

@@ -8,20 +8,22 @@ function loadProfile() {
     const candy = document.getElementById('candy');
 
     const user = getUser();
-
+    
     if (!user) {
         window.location = './';
     }
+
+    name.textContent = user.name;
+    costume.src = 'x' + user.costume + '.png';
+    candy.textContent = user.candy;
+
+    if (isDead(user)) {
+        health.textContent = 'You died!!!';
+    } 
+    else {
+        health.textContent = user.health;
+    }
 }
 
-name.textContent = user.name;
-costume.src = '' + user.costume + '.png';
-candy.textContent = user.candy;
-
-if (isDead(user)) {
-    health.textContent = 'You died!!!';
-} else {
-    health.textContent = user.health;
-}
-}; 
+export default loadProfile;
 

@@ -1,5 +1,7 @@
 import { getUser } from '../data/storage-utils.js';
 import { aliveCandyMessages, deadCandyMessages, healthMessages } from './messages.js';
+import scoreCandy from './scoreCandy.js';
+import scoreHeatlh from './scoreHealth.js';
 
 const user = getUser();
 
@@ -7,7 +9,7 @@ const storyDisplay = document.getElementById('story-display');
 
 const healthResult = scoreHeatlh(user.health);
 const candyResult = scoreCandy(user.candy);
-cosnt healthMessage = healthMessages[healthResult];
+const healthMessage = healthMessages[healthResult];
 
 let candyMessages = null;
 if (healthResult === 'dead') {

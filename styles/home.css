@@ -3,7 +3,7 @@
     flex-direction: column;
 }
 
-#avatars {
+#avatars img {
     width: 100px;
     height: auto;
 }

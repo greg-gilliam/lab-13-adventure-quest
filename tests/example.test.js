@@ -1,4 +1,6 @@
 import { makeUser } from '../home/make-user.js';
+import { setUser, getUser } from '../data/storage-utils.js';
+
 const test = QUnit.test;
 
 test('should create a new user', (expect) => {
@@ -7,7 +9,7 @@ test('should create a new user', (expect) => {
         costume: 'ghost',
         health: 35,
         candy: 0,
-        complete: []
+        complete: {}
     };
 
     const userData = new FormData();
@@ -16,5 +18,18 @@ test('should create a new user', (expect) => {
 
     const actual = makeUser(userData);
 
+    expect.deepEqual(actual, expected);
+});
+
+test('set user should update local storage with user info', (expect) => {
+    const expected = {
+        name: 'Greg',
+        costume: 'ghost',
+        health: 35,
+        candy: 0,
+        complete: {}
+    };
+    setUser(expected);
+    const actual = getUser();
     expect.deepEqual(actual, expected);
 });

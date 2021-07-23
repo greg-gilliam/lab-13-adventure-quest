@@ -4,7 +4,7 @@ export function makeUser(formData){
         health: 35,
         name: formData.get('name'),
         costume: formData.get('costume'),
-        complete: []
+        complete: {}
     };
 
     const key = 'candy';

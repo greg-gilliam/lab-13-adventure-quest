@@ -10,7 +10,7 @@ const neighborhoodDescription = document.getElementById('neighborhood-descriptio
 const choices = document.getElementById('choices');
 
 const neighborhood = findById(neighborhoods, searchParams.get('neighborhoodId'));
-console.log(neighborhood);
+
 
 neighborhoodTitle.textContent = neighborhood.title;
 neighborhoodImage.src = `../assets/quests/${neighborhood.image}`;
@@ -37,19 +37,18 @@ neighborhoodForm.addEventListener('submit', (e)=>{
     e.preventDefault();
     const choiceForm = new FormData(neighborhoodForm);
 
-
+    
     const choiceValue = choiceForm.get('choice');
     const choiceData = findById(neighborhood.choices, choiceValue);
+    console.log(choiceData);
    
 
     const user = getUser();
-    console.log(user.complete);
     user.candy += choiceData.candy;
     user.health += choiceData.health;
  
     user.complete[neighborhood.id] = true;
     setUser(user);
-    
 
     const backLink = document.getElementById('back-link');
     neighborhoodDescription.textContent = choiceData.result;
